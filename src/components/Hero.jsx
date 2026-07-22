@@ -1,14 +1,12 @@
 import PhoneMockup from './PhoneMockup'
 import StoreButtons from './StoreButtons'
-import { IconSparkle, IconCheck, IconStar } from './icons'
+import { IconSparkle, IconCheck } from './icons'
 
 const checklist = [
   'Snap food & get instant calorie count',
   'Track steps, water, weight & more',
   'Smart insights for a healthier you',
 ]
-
-const avatarColors = ['from-brand-400 to-brand-600', 'from-leaf-500 to-leaf-700', 'from-sky-500 to-blue-700']
 
 export default function Hero() {
   return (
@@ -57,25 +55,6 @@ export default function Hero() {
           </ul>
 
           <StoreButtons size="lg" className="mt-8" />
-
-          <div className="mt-8 flex items-center gap-3">
-            <div className="flex -space-x-3">
-              {avatarColors.map((c) => (
-                <span
-                  key={c}
-                  className={`h-9 w-9 rounded-full bg-gradient-to-br ${c} ring-2 ring-white`}
-                />
-              ))}
-            </div>
-            <div>
-              <div className="flex gap-0.5">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <IconStar key={i} />
-                ))}
-              </div>
-              <p className="text-[13px] font-medium text-ink/70">Trusted by 250K+ users</p>
-            </div>
-          </div>
         </div>
 
         <div className="relative flex min-h-90 items-center justify-center py-6 sm:min-h-110 md:min-h-125 lg:min-h-140 lg:justify-end">
